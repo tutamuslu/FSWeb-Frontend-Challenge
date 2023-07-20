@@ -8,9 +8,9 @@ const Profile = () => {
   const isDarkMode = useSelector((store) => store.isDarkMode);
 
   const backgroundColor = isDarkMode ? '#171043' : '#4731d3';
-    return(
-        <>
-        <div className='profile' style={{"background-color": backgroundColor}}>
+  return (
+    <>
+      <div className='profile' style={{ "backgroundColor": backgroundColor }}>
         <h3>{lang.profile.title}</h3>
         <div className='profile-detail'>
           <div className='detail'>
@@ -40,14 +40,14 @@ const Profile = () => {
             <div className='detail-img'></div>
           </div>
           <div className='detail'>
-          <h4>{lang.profile.about}</h4>
+            <h4>{lang.profile.about}</h4>
             <p>{lang.profile.aboutVal1}</p>
             <p>{lang.profile.aboutVal2}</p>
           </div>
         </div>
       </div>
-      </>
-    )
+    </>
+  )
 }
 
 export default Profile;

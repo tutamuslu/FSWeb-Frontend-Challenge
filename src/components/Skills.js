@@ -11,6 +11,7 @@ const Skills = () => {
   const h3Color = isDarkMode ? '#CBF281' : '#4832D3';
   const skillPColor = isDarkMode ? '#FFF' : '#6e6e6e';
 
+  // tasarımda 2 kolon olduğu için 2 ye böldük.
   const skills1 = [
     {
       logo: 'img/javascript.png',
@@ -25,37 +26,40 @@ const Skills = () => {
       title: "Redux"
     }];
 
-    const skills2 = [{
-      logo: 'img/node.png',
-      title: "Node"
-    },
-    {
-      logo: 'img/code.png',
-      title: "VS Code"
-    },
-    {
-      logo: 'img/figma.png',
-      title: "Figma"
-    },
-  ]
-    return (
-        <>
-        <section style={{"background-color": backgroundColor}}>
-        <h3 style={{"color": h3Color}}>{lang.skills.title}</h3>
+  const skills2 = [{
+    logo: 'img/node.png',
+    title: "Node"
+  },
+  {
+    logo: 'img/code.png',
+    title: "VS Code"
+  },
+  {
+    logo: 'img/figma.png',
+    title: "Figma"
+  },
+  ];
+
+  return (
+    <>
+      <section style={{ "backgroundColor": backgroundColor }}>
+        <h3 style={{ "color": h3Color }}>{lang.skills.title}</h3>
+        {/* tasarımda skills ile kolonları ayarladık */}
         <div className='skills'>
           {
             skills1.map(skill => (
+              // redux'a özel html olduğu için bu şekilde yaptık
               skill.title !== 'Redux' ?
-              <div className='skill'>
-                <img src={skill.logo} alt={skill.title} />
-                <p style={{"color": skillPColor}}>{skill.title}</p>
-              </div>
-              :
-                <div className='skill'>
+                <div className='skill' key={skill.title}>
+                  <img src={skill.logo} alt={skill.title} />
+                  <p style={{ "color": skillPColor }}>{skill.title}</p>
+                </div>
+                :
+                <div className='skill' key={skill.title}>
                   <div className='redux'>
                     <img src={skill.logo} alt={skill.title} />
                   </div>
-                  <p style={{"color": skillPColor}}>{skill.title}</p>
+                  <p style={{ "color": skillPColor }}>{skill.title}</p>
                 </div>
             ))
           }
@@ -63,16 +67,16 @@ const Skills = () => {
         <div className='skills'>
           {
             skills2.map(skill => (
-              <div className='skill'>
+              <div className='skill' key={skill.title}>
                 <img src={skill.logo} alt={skill.title} />
-                <p style={{"color": skillPColor}}>{skill.title}</p>
+                <p style={{ "color": skillPColor }}>{skill.title}</p>
               </div>
             ))
           }
         </div>
       </section>
-      </>
-    )
+    </>
+  )
 }
 
 export default Skills;

@@ -12,7 +12,7 @@ api.use(express.json());
 
 api.use(cors());
 
-api.get('/api/data/:lang',(req, res) => {
+api.get('/api/data/:lang', (req, res) => {
   res.json(Data.getData(req.params.lang))
 })
 

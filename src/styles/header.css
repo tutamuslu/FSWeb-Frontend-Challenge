@@ -100,13 +100,13 @@ header {
   gap: 0.625rem;
 }
 
-.social-item-dark{
+.social-item-dark {
   border: 1px solid #FFF;
   background: #252128;
   color: #FFF;
 }
 
-.social-item-light{
+.social-item-light {
   border: 1px solid var(--default-indigo-800, #3730A3);
   background: var(--default-white, #FFF);
   color: var(--default-indigo-800, #3730A3);
@@ -145,13 +145,13 @@ header {
   padding: 1%;
 }
 
-.mode-light{
+.mode-light {
   background: #8F88FF;
   justify-content: flex-end;
   align-items: center;
 }
 
-.mode-dark{
+.mode-dark {
   background: #3A3A3A;
   justify-content: flex-start;
   align-items: center;

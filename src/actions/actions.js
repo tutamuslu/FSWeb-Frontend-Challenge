@@ -1,4 +1,3 @@
-
 export const CHANGE_LANG = "CHANGE_LANG";
 export const CHANGE_VIEW_MODE = "CHANGE_VIEW_MODE";
 

@@ -1,6 +1,6 @@
 
 const LightMode = (props) => {
-    const {change, text} = props;
+    const { change, text } = props;
     return (
         <>
             <div className='mode-area mode-light' onClick={change}>
