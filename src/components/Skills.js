@@ -11,7 +11,7 @@ const Skills = () => {
   const h3Color = isDarkMode ? '#CBF281' : '#4832D3';
   const skillPColor = isDarkMode ? '#FFF' : '#6e6e6e';
 
-  // tasarımda 2 kolon olduğu için 2 ye böldük.
+  // tasarımda 2 kolon olduğu için 2 ye bölündü.
   const skills1 = [
     {
       logo: 'img/javascript.png',
@@ -44,11 +44,11 @@ const Skills = () => {
     <>
       <section style={{ "backgroundColor": backgroundColor }}>
         <h3 style={{ "color": h3Color }}>{lang.skills.title}</h3>
-        {/* tasarımda skills ile kolonları ayarladık */}
+        {/* tasarımda skills ile kolonlar ayarlandı */}
         <div className='skills'>
           {
             skills1.map(skill => (
-              // redux'a özel html olduğu için bu şekilde yaptık
+              // redux'a özel html olduğu için bu şekilde yapıldı
               skill.title !== 'Redux' ?
                 <div className='skill' key={skill.title}>
                   <img src={skill.logo} alt={skill.title} />

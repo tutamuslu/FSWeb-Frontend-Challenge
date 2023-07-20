@@ -13,7 +13,7 @@ const Header = () => {
     const dispatch = useDispatch();
     const isDarkMode = useSelector((store) => store.isDarkMode);
     const currentLanguage = useSelector((store) => store.language);
-    const { lang } = useContext(LanguageContext)
+    const { lang } = useContext(LanguageContext);
 
     // koyu / açık mod değişimi
     const viewModeChange = () => {

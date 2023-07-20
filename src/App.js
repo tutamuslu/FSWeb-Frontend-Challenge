@@ -12,7 +12,7 @@ import { RotatingLines } from 'react-loader-spinner'
 import { toast } from 'react-toastify';
 
 function App() {
-  // dil tercihine göre bilgileri tutar
+  // dil tercihine göre içerikleri tutar
   const [lang, setLang] = useState("");
   const [loading, setLoading] = useState(true);
   // mevcut dil.

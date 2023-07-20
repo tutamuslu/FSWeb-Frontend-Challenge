@@ -1,5 +1,5 @@
 const dataEN = {
-    languageInfo: "Language English now!",
+    languageInfo: "Dil şuan Türkçe!",
     modeDarkInfo: "View Mode is 🌙 now!",
     modeLightInfo: "View Mode is ☀️ now!",
     header: {
@@ -61,7 +61,7 @@ const dataEN = {
 
 
 const dataTR = {
-    languageInfo: "Dil şuan Türkçe!",
+    languageInfo: "Language English now!",
     modeDarkInfo: "🌙 mod aktif!",
     modeLightInfo: "☀️ mod aktif!",
     header: {
