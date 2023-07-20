@@ -1,34 +1,59 @@
 import './styles/App.css';
-import Profile from './components/Profile';
-import Projects from './components/Projects';
+import Header from './components/header';
 import Skills from './components/Skills';
-import Footer from './components/Footer';
+import Profile from './components/profile';
+import Projects from './components/projects';
+import Footer from './components/footer';
+import { useState, useEffect } from 'react';
+import axios from 'axios';
+import { useSelector } from 'react-redux';
+import { LanguageContext } from './Contexts/languageContext';
+import { RotatingLines } from 'react-loader-spinner'
 
 function App() {
+  // dil tercihine göre bilgileri tutar
+  const [lang, setLang] = useState("");
+  const [loading, setLoading] = useState(true);
+  // mevcut dil.
+  const currentLanguage = useSelector((store) => store.language);
+  
+  useEffect(() => {
+    setTimeout(function() {
+      console.log("tekrar axios")
+      axios.get('http://localhost:9000/api/data/' + currentLanguage)
+      .then(res => {
+        setLang(res.data);
+        setLoading(false);
+      })
+      .catch(err => {
+        console.log(err);
+      });
+    }, 111);
+
+  }, [currentLanguage]);
+
   return (
+    loading
+    ?
+    <div className='loading'>
+      <RotatingLines
+      className="loading"
+      strokeColor="grey"
+      strokeWidth="5"
+      animationDuration="0.75"
+      width="66"
+      visible={true}
+      />
+    </div>
+:
     <>
-      <header>
-        <div className='header-left'>
-          <div className='language'>Türkçe'ye Geç</div>
-          <div className='left-content'>
-            <div className='name'>Almila</div>
-            <div className='job'>I am a Frontend Developer...</div>
-            <div className='description'>...who likes to craft solid and scalable frontend products with great user experiences.</div>
-            <div className='social'>
-              <div className='github'>Github</div>
-              <div className='linkedin'>Linkedin</div>
-            </div>
-          </div>
-        </div>
-        {/* <div className='header-img'></div> */}
-        <div className='header-right'>
-          <div className='mode'>Dark Mode</div>
-        </div>
-      </header>
-      <Skills />
-      <Profile />
-      <Projects />
-      <Footer />
+     <LanguageContext.Provider value={{lang}}>
+        <Header />
+        <Skills />
+        <Profile />
+        <Projects />
+        <Footer />
+     </LanguageContext.Provider>
     </>
   );
 }

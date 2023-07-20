@@ -1,45 +1,48 @@
+import '../styles/projects.css';
+import { useSelector } from 'react-redux';
+import { useContext } from 'react';
+import { LanguageContext } from '../Contexts/languageContext';
 
 const Projects = () => {
+  const { lang } = useContext(LanguageContext)
+  const isDarkMode = useSelector((store) => store.isDarkMode);
+
+  const backgroundColor = isDarkMode ? '#1A210B' : '#CBF281';
+  const h3Color = isDarkMode ? '#CBF281' : '#4731D3';
+  const projectBackground = isDarkMode ? '#2B2727': '#FFF';
+  const projectTitleColor = isDarkMode ? '#C1BAED' : '#4338CA';
+  const projectPColor = isDarkMode ? '#FFF' : '#383838';
+  const techBackgroundColor = isDarkMode ? '#8173DA' : '#4731D3';
+  const linkColor = isDarkMode ? '#CBF281' : '#120B39';
+  
     return(
         <>
-        <div className='projects'>
-          <h3>Projects</h3>
-          <div className='project'>
+        <div className='projects' style={{"background-color": backgroundColor}}>
+          <h3 style={{"color": h3Color}}>{lang.projects.title}</h3>
+          {
+            lang.projects.projects.map(project => (
+              <div className='project' style={{"background-color": projectBackground}}>
               <img src='img/project1.png' alt='project 1' />
               <div className='project-info'>
-                <div className='project-title'>
-                  Workintech
+                <div className='project-title' style={{"color": projectTitleColor}}>
+                  {project.title}
                 </div>
-                <p>A simple, customizable, minimal setup cookie plugin that allows your users to select which cookies to accept or decline. This was created with vanilla JS, SCSS and Parcel Bundler and is available as a NPM package and the git repository makes any type of customization to code and themes possible.</p>
+                <p style={{"color": projectPColor}}>{project.description}</p>
                 <div className='project-techs'>
-                  <span>react</span>
-                  <span>redux</span>
-                  <span>vercel</span>
+                  {
+                    project.techs.map(tech => (
+                      <span style={{"background-color": techBackgroundColor}}>{tech}</span>
+                    ))
+                  }
                 </div>
                 <div className='project-links'>
-                  <a href='/#'>View Site</a>
-                  <a href="/#">Github</a>
+                  <a href='/#' style={{"color": linkColor}}>View Site</a>
+                  <a href='/#' style={{"color": linkColor}}>Github</a>
                 </div>
               </div>
           </div>
-          <div className='project'>
-              <img src='img/project2.png' alt='project 2' />
-              <div className='project-info'>
-                <div className='project-title'>
-                  Journey
-                </div>
-                <p>A simple, customizable, minimal setup cookie plugin that allows your users to select which cookies to accept or decline. This was created with vanilla JS, SCSS and Parcel Bundler and is available as a NPM package and the git repository makes any type of customization to code and themes possible.</p>
-                <div className='project-techs'>
-                  <span>react</span>
-                  <span>redux</span>
-                  <span>vercel</span>
-                </div>
-                <div className='project-links'>
-                  <a href='/#'>View Site</a>
-                  <a href="/#">Github</a>
-                </div>
-              </div>
-          </div>
+            ))
+          }
       </div>
         </>
     )

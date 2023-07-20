@@ -1,0 +1,92 @@
+.projects {
+    background: #CBF281;
+    height: 62.4375rem;
+    padding: 0 20%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .projects h3 {
+    color: #4731D3;
+    font-family: Inter;
+    font-size: 3rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%;
+    /* 3rem */
+    letter-spacing: 0.03rem;
+    padding: 5% 0;
+  }
+  
+  .project {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    border-radius: 0.75rem;
+    background: #FFF;
+    margin-bottom: 5%;
+    box-shadow: 0px 18px 88px -4px rgba(24, 39, 75, 0.14), 0px 8px 28px -6px rgba(24, 39, 75, 0.12);
+  }
+  
+  .project img {
+    width: 22.5rem;
+    height: 22.5rem;
+    flex-shrink: 0;
+    border-radius: 0.75rem 0rem 0rem 0.75rem;
+    border-right: 1px solid #D2D2D2;
+  }
+  
+  .project-title {
+    color: var(--default-indigo-700, #4338CA);
+    font-family: Inter;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%;
+  }
+  
+  .project-info {
+    padding-left: 5%;
+  }
+  
+  .project-info p {
+    color: #383838;
+    font-family: Inter;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 125%;
+    /* 1.25rem */
+    padding: 5% 0%;
+  }
+  
+  .project-techs span {
+    border-radius: 1.4375rem;
+    background: #4731D3;
+    color: #FFF;
+    font-family: Inter;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%;
+    /* 0.875rem */
+    letter-spacing: -0.04375rem;
+    padding: 0.5rem 1.125rem 0.5625rem 1.125rem;
+    margin-right: 3%;
+  }
+  
+  .project-links {
+    padding-top: 5%;
+  }
+  
+  .project-links a {
+    margin-right: 3%;
+    color: #120B39;
+    font-family: Inter;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1rem; /* 100% */
+    text-decoration-line: underline;
+  }

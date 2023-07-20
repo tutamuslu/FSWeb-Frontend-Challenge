@@ -1,38 +1,74 @@
+import '../styles/skills.css';
+import { useSelector } from 'react-redux';
+import { useContext } from 'react';
+import { LanguageContext } from '../Contexts/languageContext';
 
 const Skills = () => {
+  const { lang } = useContext(LanguageContext)
+  const isDarkMode = useSelector((store) => store.isDarkMode);
+
+  const backgroundColor = isDarkMode ? '#252128' : '#FFF';
+  const h3Color = isDarkMode ? '#CBF281' : '#4832D3';
+  const skillPColor = isDarkMode ? '#FFF' : '#6e6e6e';
+
+  const skills1 = [
+    {
+      logo: 'img/javascript.png',
+      title: "JavaScript"
+    },
+    {
+      logo: 'img/react.png',
+      title: "React"
+    },
+    {
+      logo: 'img/redux.png',
+      title: "Redux"
+    }];
+
+    const skills2 = [{
+      logo: 'img/node.png',
+      title: "Node"
+    },
+    {
+      logo: 'img/code.png',
+      title: "VS Code"
+    },
+    {
+      logo: 'img/figma.png',
+      title: "Figma"
+    },
+  ]
     return (
         <>
-        <section>
-        <h3>Skills</h3>
+        <section style={{"background-color": backgroundColor}}>
+        <h3 style={{"color": h3Color}}>{lang.skills.title}</h3>
         <div className='skills'>
-          <div className='skill'>
-            <img src="img/javascript.png" alt='javascript' />
-            <p>Javascript</p>
-          </div>
-          <div className='skill'>
-            <img src="img/react.png" alt='react' />
-            <p>React</p>
-          </div>
-          <div className='skill'>
-            <div className='redux'>
-              <img src="img/redux.png" alt='redux' />
-            </div>
-            <p>Redux</p>
-          </div>
+          {
+            skills1.map(skill => (
+              skill.title !== 'Redux' ?
+              <div className='skill'>
+                <img src={skill.logo} alt={skill.title} />
+                <p style={{"color": skillPColor}}>{skill.title}</p>
+              </div>
+              :
+                <div className='skill'>
+                  <div className='redux'>
+                    <img src={skill.logo} alt={skill.title} />
+                  </div>
+                  <p style={{"color": skillPColor}}>{skill.title}</p>
+                </div>
+            ))
+          }
         </div>
         <div className='skills'>
-          <div className='skill'>
-            <img src="img/node.png" alt='node' />
-            <p>Node</p>
-          </div>
-          <div className='skill'>
-            <img src="img/code.png" alt='code' />
-            <p>Vs Code</p>
-          </div>
-          <div className='skill'>
-            <img src="img/figma.png" alt='figma' />
-            <p>Figma</p>
-          </div>
+          {
+            skills2.map(skill => (
+              <div className='skill'>
+                <img src={skill.logo} alt={skill.title} />
+                <p style={{"color": skillPColor}}>{skill.title}</p>
+              </div>
+            ))
+          }
         </div>
       </section>
       </>
