@@ -1,7 +1,7 @@
 import '../styles/skills.css';
 import { useSelector } from 'react-redux';
 import { useContext } from 'react';
-import { LanguageContext } from '../Contexts/languageContext';
+import { LanguageContext } from '../contexts/languageContext';
 
 const Skills = () => {
   const { lang } = useContext(LanguageContext)

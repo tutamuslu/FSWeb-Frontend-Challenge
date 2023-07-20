@@ -1,7 +1,7 @@
 import '../../styles/header.css';
 import { useSelector, useDispatch } from "react-redux";
 import { changeViewMode, changeLang } from '../../actions/actions';
-import { LanguageContext } from '../../Contexts/languageContext';
+import { LanguageContext } from '../../contexts/languageContext';
 import { useContext } from 'react';
 import HeaderSocial from './headerSocial';
 import LightMode from './lightmode';

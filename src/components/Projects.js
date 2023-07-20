@@ -1,7 +1,7 @@
 import '../styles/projects.css';
 import { useSelector } from 'react-redux';
 import { useContext } from 'react';
-import { LanguageContext } from '../Contexts/languageContext';
+import { LanguageContext } from '../contexts/languageContext';
 
 const Projects = () => {
   const { lang } = useContext(LanguageContext)

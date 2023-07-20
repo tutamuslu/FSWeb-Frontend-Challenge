@@ -7,7 +7,7 @@ import Footer from './components/footer';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useSelector } from 'react-redux';
-import { LanguageContext } from './Contexts/languageContext';
+import { LanguageContext } from './contexts/languageContext';
 import { RotatingLines } from 'react-loader-spinner'
 import { toast } from 'react-toastify';
 

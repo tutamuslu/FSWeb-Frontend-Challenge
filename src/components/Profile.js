@@ -1,7 +1,7 @@
 import '../styles/profile.css';
 import { useSelector } from 'react-redux';
 import { useContext } from 'react';
-import { LanguageContext } from '../Contexts/languageContext';
+import { LanguageContext } from '../contexts/languageContext';
 
 const Profile = () => {
   const { lang } = useContext(LanguageContext)

@@ -2,7 +2,7 @@ import '../styles/footer.css';
 import { useSelector } from 'react-redux';
 import SocialIcons from './socialIcons';
 import { useContext } from 'react';
-import { LanguageContext } from '../Contexts/languageContext';
+import { LanguageContext } from '../contexts/languageContext';
 
 const Footer = () => {
   const { lang } = useContext(LanguageContext)
