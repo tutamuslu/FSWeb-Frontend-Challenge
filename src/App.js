@@ -29,7 +29,7 @@ function App() {
         })
         .catch(err => {
           setLoading(false);
-          toast("Servis hatası!!")
+          toast("Servis hatası!! : " + err)
         });
     }, 100);
   }, [currentLanguage]);

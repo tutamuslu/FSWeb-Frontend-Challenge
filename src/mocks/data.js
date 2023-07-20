@@ -1,4 +1,7 @@
 const dataEN = {
+    languageInfo: "Language English now!",
+    modeDarkInfo: "View Mode is 🌙 now!",
+    modeLightInfo: "View Mode is ☀️ now!",
     header: {
         name: "Almila",
         job: "I am a Frontend Developer...",
@@ -58,6 +61,9 @@ const dataEN = {
 
 
 const dataTR = {
+    languageInfo: "Dil şuan Türkçe!",
+    modeDarkInfo: "🌙 mod aktif!",
+    modeLightInfo: "☀️ mod aktif!",
     header: {
         name: "Almila",
         job: "Front-End UI Geliştirici...",

@@ -23,7 +23,7 @@ const Projects = () => {
         {
           lang.projects.projects.map(project => (
             <div className='project' style={{ "backgroundColor": projectBackground }}>
-              <img src='img/project1.png' alt='project 1' />
+              <img src={project.img} alt={project.title} />
               <div className='project-info'>
                 <div className='project-title' style={{ "color": projectTitleColor }}>
                   {project.title}

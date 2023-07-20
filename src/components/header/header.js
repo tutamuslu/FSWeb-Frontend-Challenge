@@ -6,6 +6,7 @@ import { useContext } from 'react';
 import HeaderSocial from './headerSocial';
 import LightMode from './lightmode';
 import DarkMode from './darkmode';
+import { toast } from 'react-toastify';
 
 const Header = () => {
 
@@ -17,6 +18,11 @@ const Header = () => {
     // koyu / açık mod değişimi
     const viewModeChange = () => {
         dispatch(changeViewMode());
+        if(!isDarkMode){
+            toast(lang.modeDarkInfo);
+        }else{
+            toast(lang.modeLightInfo);
+        }
     }
 
     // dil değişimi tr ise en, en ise tr yaptık
@@ -30,6 +36,7 @@ const Header = () => {
         }
 
         dispatch(changeLang(newLanguage));
+        toast(lang.languageInfo);
     }
 
     // dark mod geçişinde renkleri değiştiriyoruz
