@@ -10,6 +10,7 @@ import { useSelector } from 'react-redux';
 import { LanguageContext } from './contexts/languageContext';
 import { RotatingLines } from 'react-loader-spinner'
 import { toast } from 'react-toastify';
+import Data from './mocks/data';
 
 function App() {
   // dil tercihine göre içerikleri tutar
@@ -22,9 +23,9 @@ function App() {
   useEffect(() => {
     setTimeout(function () {
       console.log("tekrar axios")
-      axios.get('http://localhost:9000/api/data/' + currentLanguage)
+      axios.post('https://reqres.in/api/tugba', {lang: currentLanguage, langData: Data.getData(currentLanguage)})
         .then(res => {
-          setLang(res.data);
+          setLang(res.data.langData);
           setLoading(false);
         })
         .catch(err => {
