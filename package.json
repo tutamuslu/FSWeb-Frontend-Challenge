@@ -27,7 +27,6 @@
     "backend": "node src/mocks/api.js",
     "frontend": "react-scripts start",
     "start": "fkill :9000 :3000 -s && concurrently \"npm:backend\" \"npm:frontend\"",
-    "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

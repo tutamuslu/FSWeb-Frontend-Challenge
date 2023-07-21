@@ -38,7 +38,6 @@ function App() {
     loading
       ?
       <RotatingLines
-        className="loading"
         strokeColor="grey"
         strokeWidth="5"
         animationDuration="0.75"
