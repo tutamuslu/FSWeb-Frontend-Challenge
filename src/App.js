@@ -21,9 +21,7 @@ function App() {
 
   // dil değiştiğinde apiye istek atalım
   useEffect(() => {
-    setTimeout(function () {
-      console.log("tekrar axios")
-      axios.post('https://reqres.in/api/tugba', {lang: currentLanguage, langData: Data.getData(currentLanguage)})
+    axios.post('https://reqres.in/api/tugba', {lang: currentLanguage, langData: Data.getData(currentLanguage)})
         .then(res => {
           setLang(res.data.langData);
           setLoading(false);
@@ -32,7 +30,6 @@ function App() {
           setLoading(false);
           toast("Servis hatası!! : " + err)
         });
-    }, 100);
   }, [currentLanguage]);
 
   return (
