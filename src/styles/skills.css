@@ -53,3 +53,17 @@
     line-height: 150%;
     text-transform: uppercase;
   }
+
+  @media screen and (max-width:500px){
+    section{
+      flex-direction: column;
+      padding: 0;
+      width: 100%;
+    }
+    section h3{
+      padding-left: 10%;
+    }
+    .skills{
+      width: 100%;
+    }
+  }

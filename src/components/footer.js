@@ -18,7 +18,7 @@ const Footer = () => {
       <div className='contact' style={{ "backgroundColor": backgroundColor }}>
         <h5 style={{ "color": color }}>{lang.footer.title}</h5>
         <p style={{ "color": pColor }}>{lang.footer.description}</p>
-        <a href={lang.footer.title} style={{ "color": color }}>{lang.footer.mail}</a>
+        <a href={"mailto:" + lang.footer.mail} style={{ "color": color }}>{lang.footer.mail}</a>
         <SocialIcons color={iconColor} />
       </div>
     </>

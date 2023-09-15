@@ -37,8 +37,8 @@ const Projects = () => {
                   }
                 </div>
                 <div className='project-links'>
-                  <a href='/#' style={{ "color": linkColor }}>View Site</a>
-                  <a href='/#' style={{ "color": linkColor }}>Github</a>
+                  <a href={project.link} style={{ "color": linkColor }}>View Site</a>
+                  <a href={project.github} style={{ "color": linkColor }}>Github</a>
                 </div>
               </div>
             </div>

@@ -1,4 +1,5 @@
 import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 
 const HeaderSocial = () => {
     const isDarkMode = useSelector((store) => store.isDarkMode);
@@ -14,11 +15,13 @@ const HeaderSocial = () => {
     const socialItems = [
         {
             logo: githubLogo,
-            title: 'Github'
+            title: 'Github',
+            url: "https://github.com/tutamuslu"
         },
         {
             logo: linkedinLogo,
-            title: 'Linkedin'
+            title: 'Linkedin',
+            url: "https://www.linkedin.com/in/tugbamuslu/"
         }
     ];
     //github ve llinkedin için
@@ -28,12 +31,14 @@ const HeaderSocial = () => {
         <div className='social-area'>
             {
                 socialItems.map(item => (
-                    <div className={socialItemClass} key={item.title}>
-                        <div className='social-icon'>
-                            {item.logo}
+                   <Link to={item.url} target="blank">
+                     <div className={socialItemClass} key={item.title}>
+                            <div className='social-icon'>
+                                {item.logo}
+                            </div>
+                            {item.title}
                         </div>
-                        {item.title}
-                    </div>
+                   </Link>
                 ))
             }
         </div>

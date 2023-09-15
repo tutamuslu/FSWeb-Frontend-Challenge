@@ -95,3 +95,34 @@
   letter-spacing: 0.01rem;
   display: flex;
 }
+
+@media screen and (max-width:500px){
+  .profile{
+    padding: 5%;
+  }
+  .profile h3{
+    padding-left: 5%;
+  }
+  .profile-detail{
+    flex-direction: column;
+  }
+  .profile-detail{
+    width: 100%;
+  }
+  .detail{
+    width: 100%;
+  }
+  .detail h4{
+    width: auto;
+    height: auto;
+    font-size: 2rem; 
+    margin-top: 2%;
+  }
+  .detail p{
+    width: 100%;
+    padding: 0;
+  }
+  .mobil-img{
+    height: 150px;
+  }
+}

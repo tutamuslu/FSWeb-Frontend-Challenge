@@ -36,7 +36,7 @@ const Profile = () => {
               <div className='row-content'>{lang.profile.positionVal}</div>
             </div>
           </div>
-          <div className='detail'>
+          <div className='detail mobil-img'>
             <div className='detail-img'></div>
           </div>
           <div className='detail'>

@@ -9,15 +9,16 @@ import thunk from "redux-thunk";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { reducer } from "./reducers/reducers";
+import { BrowserRouter } from 'react-router-dom';
 
 const store = createStore(reducer, applyMiddleware(thunk));
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
   <Provider store={store}>
-    <>
+    <BrowserRouter>
       <ToastContainer />
       <App />
-    </>
+    </BrowserRouter>
   </Provider>
 );

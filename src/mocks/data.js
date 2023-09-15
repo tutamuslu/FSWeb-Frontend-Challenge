@@ -3,8 +3,8 @@ const dataEN = {
     modeDarkInfo: "View Mode is 🌙 now!",
     modeLightInfo: "View Mode is ☀️ now!",
     header: {
-        name: "Almila",
-        job: "I am a Frontend Developer...",
+        name: "Tuğba Muslu",
+        job: "I am a Full-Stack Developer...",
         description: "...who likes to craft solid and scalable frontend products with great user experiences.",
         changeLang1: "Türkçe",
         changeLang2: "'Ye Geç",
@@ -18,44 +18,58 @@ const dataEN = {
         title: "Profile",
         info: "Basic Information",
         birthdate: "Birth Date",
-        birthdateVal: '24.11.1995',
+        birthdateVal: '1994',
         city: "Residence City",
-        cityVal: "Ankara",
+        cityVal: "Istanbul",
         education: "Education",
-        educationVal: "Hacettepe Edu. Biology",
+        educationVal: "Duzce Edu. // Workintech",
         status: "Status",
-        statusVal: "Licence Degree 2016",
+        statusVal: "Licence Degree 2020",
         position: "Prefered Position",
-        positionVal: "Frond-end UI",
+        positionVal: "Full-Stack Developer",
         about: "About Me",
-        aboutVal1: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam aut, odit laborum aliquam voluptatum nisi mollitia.",
-        aboutVal2: "Mnima accusamus ratione soluta aperiam sit voluptate? Dicta quod deserunt quam temporibus cumque magnam! ",
+        aboutVal1: "Since I felt close to the software industry, I decided to receive Full-Stack Developer training at Workintech.",
+        aboutVal2: "I am now nearing the end of the training. Information about the technologies and projects I experienced throughout my education is as follows.",
     },
     projects: {
         title: "Projects",
         projects: [
             {
                 img: "img/project1.png",
-                title: "Workintech",
-                description: "A simple, customizable, minimal setup cookie plugin that allows your users to select which cookies to accept or decline. This was created with vanilla JS, SCSS and Parcel Bundler and is available as a NPM package and the git repository makes any type of customization to code and themes possible.",
+                title: "Mini Twitter Site",
+                description: "Simple application that includes sign up, log in, tweet, delete, update, comment, retweet and like functions. Front-end react is written with backend java script.",
                 techs: [
-                    "react", "redux", "vercel"
-                ]
+                    "react", "context api", "java", "spring", "postgresql"
+                ],
+                link: "#",
+                github: "https://github.com/tutamuslu/mini-twitter-x-frontend"
             },
             {
                 img: "img/project2.png",
-                title: "Journey",
-                description: "A simple, customizable, minimal setup cookie plugin that allows your users to select which cookies to accept or decline. This was created with vanilla JS, SCSS and Parcel Bundler and is available as a NPM package and the git repository makes any type of customization to code and themes possible.",
+                title: "Portolio Site",
+                description: "A React UI application that works with fix data and makes a simple mock API request containing personal information, skills and projects.",
                 techs: [
                     "react", "redux", "vercel"
-                ]
+                ],
+                link: "#",
+                github: "https://github.com/tutamuslu/FSWeb-Frontend-Challenge"
+            },
+            {
+                img: "img/project3.png",
+                title: "Pizza Site",
+                description: "Simple form application made with React. Includes validations and tests.",
+                techs: [
+                    "react", "redux", "vercel"
+                ],
+                link: "https://pizza-tutamuslu.vercel.app/",
+                github: "https://github.com/tutamuslu/fsweb-s7-challenge-pizza"
             }
         ]
     },
     footer: {
         title: "Send me a Message!",
         description: "Got a question or proposal, or just want to say hello? Go ahead.",
-        mail: "almilasucode@gmail.com"
+        mail: "tugba.evli 🐎 gmail.com"
     }
 }
 
@@ -65,7 +79,7 @@ const dataTR = {
     modeDarkInfo: "🌙 mod aktif!",
     modeLightInfo: "☀️ mod aktif!",
     header: {
-        name: "Almila",
+        name: "Tuğba Muslu",
         job: "Front-End UI Geliştirici...",
         description: "harika kullanıcı deneyimleriyle sağlam ve ölçeklenebilir ön uç ürünleri üretmeyi sevenler için...",
         changeLang1: "English",
@@ -80,34 +94,42 @@ const dataTR = {
         title: "Profil",
         info: "Kişisel Bilgiler",
         birthdate: "Doğum Tarihi",
-        birthdateVal: '24.11.1995',
+        birthdateVal: '1994',
         city: "İkamet Şehri",
-        cityVal: "Ankara",
+        cityVal: "İstanbul",
         education: "Eğitim",
-        educationVal: "Hacettepe Edu. Biology",
+        educationVal: "Düzce Ün.//Workintech",
         status: "Durumu",
-        statusVal: "Lisans 2016",
+        statusVal: "Lisans 2020",
         position: "Terich Ettiği Rol",
-        positionVal: "Frond-end UI",
+        positionVal: "Full-Stack Dev.",
         about: "Hakkımda",
-        aboutVal1: "Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir. Lorem Ipsum, adı bilinmeyen...",
-        aboutVal2: "Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir. Lorem Ipsum,",
+        aboutVal1: "Kendimi Yazılım sektörüne yakın hissettiğim için Workintech bünyesinde Full-Stack Yazılımcı eğitimi almaya karar verdim. ",
+        aboutVal2: "Şuan da eğitimin sonuna yaklaşmış bulunmaktayım. Eğitimim boyunca deneyimlediğim teknolojiler ve projeler ile ilgili bilgiler aşağıdaki gibidir. ",
     },
     projects: {
         title: "Projeler",
         projects: [
             {
                 img: "img/project1.png",
-                title: "Workintech",
-                description: "Kullanıcılarınızın hangi tanımlama bilgilerini kabul edeceklerini veya reddedeceklerini seçmelerine olanak tanıyan basit, özelleştirilebilir, minimum kurulumlu bir tanımlama bilgisi eklentisi. Bu, vanilya JS, SCSS ve Parcel Bundler ile oluşturulmuştur ve bir NPM paketi olarak mevcuttur ve git deposu, kod ve temalar için her türlü özelleştirmeyi mümkün kılar.",
+                title: "Mini Twitter Site",
+                description: "Üye ol, giriş, tweet atmak, silme, güncelleme, yorum yapma, retweet, like fonksiyonlarını içeren basit uygulama. Front-end react, backend java script ile yazılmıştır.",
+                techs: [
+                    "react", "context api", "java", "spring", "postgresql"
+                ],
+            },
+            {
+                img: "img/project2.png",
+                title: "Portföy Site",
+                description: "Kişisel bilgilerin, yetenek ve projelerin bulunduğu basit mock api isteği yapan fix data ile çalışan bir React ui uygulaması.",
                 techs: [
                     "react", "redux", "vercel"
                 ]
             },
             {
-                img: "img/project2.png",
-                title: "Journey",
-                description: "Kullanıcılarınızın hangi tanımlama bilgilerini kabul edeceklerini veya reddedeceklerini seçmelerine olanak tanıyan basit, özelleştirilebilir, minimum kurulumlu bir tanımlama bilgisi eklentisi. Bu, vanilya JS, SCSS ve Parcel Bundler ile oluşturulmuştur ve bir NPM paketi olarak mevcuttur ve git deposu, kod ve temalar için her türlü özelleştirmeyi mümkün kılar.",
+                img: "img/project3.png",
+                title: "Pizza Site",
+                description: "React ile yapılmış olan basit form uygulaması. Validasyonları ve testleri içerir.",
                 techs: [
                     "react", "redux", "vercel"
                 ]
@@ -117,7 +139,7 @@ const dataTR = {
     footer: {
         title: "Bana mesaj Gönder!",
         description: "Bir sorunuz veya teklifiniz mi var, yoksa sadece merhaba mı demek istiyorsunuz? Görüşelim!",
-        mail: "almilasucode@gmail.com"
+        mail: "tugba.evli 🐎 gmail.com"
     }
 }
 

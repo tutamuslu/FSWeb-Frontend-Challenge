@@ -1,6 +1,6 @@
 .projects {
   background: #CBF281;
-  height: 62.4375rem;
+  height: auto;
   padding: 0 20%;
   display: flex;
   flex-direction: column;
@@ -90,4 +90,35 @@
   line-height: 1rem;
   /* 100% */
   text-decoration-line: underline;
+}
+
+@media screen and (max-width:500px){
+  .projects{
+    padding: 5%;
+    height: auto;
+  }
+  .project{
+    width: 100%;
+    flex-direction: column;
+  }
+  .project img{
+    width: 95%;
+  }
+  .project-title{
+    font-size: 2.5rem;
+  }
+  .project-info p{
+    font-size: 1.5rem;
+    padding-top: 2%;
+  }
+  .project-techs{
+    margin-top: 3%;
+  }
+  .project-links{
+    margin-top: 3%;
+    padding-bottom: 3%;
+  }
+  .project-links a{
+    font-size: 1.3rem;
+  }
 }

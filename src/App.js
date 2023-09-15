@@ -21,7 +21,7 @@ function App() {
 
   // dil değiştiğinde apiye istek atalım
   useEffect(() => {
-    axios.post('https://reqres.in/api/tugba', {lang: currentLanguage, langData: Data.getData(currentLanguage)})
+    axios.post('https://reqres.in/api/data', {lang: currentLanguage, langData: Data.getData(currentLanguage)})
         .then(res => {
           setLang(res.data.langData);
           setLoading(false);
